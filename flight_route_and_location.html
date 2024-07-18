@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_1de36f399ff67edb7b5b37378b5b69b9 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_1de36f399ff67edb7b5b37378b5b69b9" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_1de36f399ff67edb7b5b37378b5b69b9 = L.map(
+                "map_1de36f399ff67edb7b5b37378b5b69b9",
+                {
+                    center: [49.1762, -121.7176],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 8,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_991589914580f4e088515774601223e5 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_991589914580f4e088515774601223e5.addTo(map_1de36f399ff67edb7b5b37378b5b69b9);
+        
+    
+            var marker_f72aabb3d98b1d2b4e6ca71660b1c6f6 = L.marker(
+                [40.7127281, -74.0060152],
+                {}
+            ).addTo(map_1de36f399ff67edb7b5b37378b5b69b9);
+        
+    
+            var icon_7312a392de5b229ade9ca7c9b15f2706 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_f72aabb3d98b1d2b4e6ca71660b1c6f6.setIcon(icon_7312a392de5b229ade9ca7c9b15f2706);
+        
+    
+            marker_f72aabb3d98b1d2b4e6ca71660b1c6f6.bindTooltip(
+                `<div>
+                     Departure
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fae4de6f1923e2d10d653cc8b8c85ed1 = L.marker(
+                [34.0536909, -118.242766],
+                {}
+            ).addTo(map_1de36f399ff67edb7b5b37378b5b69b9);
+        
+    
+            var icon_8bc6fe8513d702aef78a9712224f2cda = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_fae4de6f1923e2d10d653cc8b8c85ed1.setIcon(icon_8bc6fe8513d702aef78a9712224f2cda);
+        
+    
+            marker_fae4de6f1923e2d10d653cc8b8c85ed1.bindTooltip(
+                `<div>
+                     Destination
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_7717cf01e51789ab0e4aaad911125760 = L.polyline(
+                [[40.7127281, -74.0060152], [34.0536909, -118.242766]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1de36f399ff67edb7b5b37378b5b69b9);
+        
+    
+            var marker_3ff8d4890be0983b7d171faa24d6744a = L.marker(
+                [49.1762, -121.7176],
+                {}
+            ).addTo(map_1de36f399ff67edb7b5b37378b5b69b9);
+        
+    
+            var icon_8c3abcff903b887f2e619141db69d92f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_3ff8d4890be0983b7d171faa24d6744a.setIcon(icon_8c3abcff903b887f2e619141db69d92f);
+        
+    
+            marker_3ff8d4890be0983b7d171faa24d6744a.bindTooltip(
+                `<div>
+                     Flight CFCSP    - Canada
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a5c3fd76159e1d642a8cb80ee09b4db6 = L.circleMarker(
+                [49.1762, -121.7176],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_1de36f399ff67edb7b5b37378b5b69b9);
+        
+    
+            circle_marker_a5c3fd76159e1d642a8cb80ee09b4db6.bindTooltip(
+                `<div>
+                     Altitude: 1798.32 m
+Velocity: 57.83 m/s
+Heading: 215.95°
+Vertical Rate: -3.25 m/s
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
